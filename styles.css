@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #fff;
+    --secondary-color: #C06B3E;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +11,11 @@
 }
 
 body {
-    height: 100vh;
     background: url("assets/hero-bg.jpg");
     background-position: center;
     background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
 } 
 
 header {
@@ -34,7 +40,7 @@ header .navbar {
 }
 
 .navbar .logo span {
-    color: #C06B3E;
+    color: var(--secondary-color);
 }
 
 .navbar .menu-links {
@@ -43,15 +49,60 @@ header .navbar {
 }
 
 .navbar a {
-    color: #fff;
+    color: var(--primary-color);
     text-decoration: none;
     transition: 0.2s ease;
 }
 
 .navbar a:hover {
-    color:#C06B3E;
+    color: var(--secondary-color);
 }
 
 .navbar ul {
     list-style: none;
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+
+}
+
+.hero-section .content {
+    color: var(--primary-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.hero-section .content h1 {
+    font-size: 3rem;
+    max-width: 800px;
+}
+
+.hero-section .content p {
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 800px;
+}
+
+.hero-section .content button {
+    background: var(--primary-color);
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 38px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.hero-section .content button:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
